@@ -1,0 +1,6 @@
+org/coderinlinux/practicee/event/JoinEvent.class
+org/coderinlinux/practicee/event/MovementListener.class
+org/coderinlinux/practicee/event/MovementListener$1.class
+org/coderinlinux/practicee/commands/EnrichCommand.class
+org/coderinlinux/practicee/EventManager.class
+org/coderinlinux/practicee/Practicee.class

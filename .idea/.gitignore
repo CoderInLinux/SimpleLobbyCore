@@ -1,12 +1,11 @@
 ### IntelliJ IDEA ###
-target/**
 /shelf/
 /workspace.xml
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 .idea/*
-target/
+target/**
 out/
 *.iml
 *.zip

@@ -1,8 +1,0 @@
-name: Practicee
-version: '1.0-SNAPSHOT'
-main: org.coderinlinux.practicee.Practicee
-api-version: '1.0'
-
-commands:
-  enrich:
-    description: make you rich

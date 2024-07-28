@@ -6,3 +6,5 @@ api-version: '1.0'
 commands:
   enrich:
     description: make you rich
+  kit:
+    description: you have one kit

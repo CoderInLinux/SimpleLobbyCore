@@ -9,6 +9,7 @@ public final class Practicee extends JavaPlugin {
     @Override
     public void onEnable() {
         this.getCommand("enrich").setExecutor(new EnrichCommand());
+        this.getCommand("kit").setExecutor(new KitCommand());
         getServer().getPluginManager().registerEvents(new JoinEvent(), this);
         new EventManager(this);
         getLogger().info("Plugin enabled!");

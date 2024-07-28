@@ -62,7 +62,7 @@ public class JoinEvent implements WebSocket.Listener, Listener {
         objective.setDisplayName("§3Sever Name");
         objective.setDisplaySlot(DisplaySlot.SIDEBAR);
         objective.getScore("          ").setScore(12);
-        objective.getScore("§6Range §7: §3" + player.getName()).setScore(11);
+        objective.getScore("§6Usuario §7: §3" + player.getName()).setScore(11);
         objective.getScore("  ").setScore(10);
         objective.getScore(" ").setScore(9);
         if (player.hasPermission("admin.use")){

@@ -1,5 +1,6 @@
 package org.coderinlinux.practicee.commands;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -23,9 +24,9 @@ public class KitCommand implements CommandExecutor {
             ItemStack itemstack6 = new ItemStack(Material.LEATHER_HELMET, 1);
             ItemStack itemstack7 = new ItemStack(Material.LEATHER_LEGGINGS, 1);
             inventory.addItem(itemstack, itemstack1, itemstack2, itemstack3, itemstack4, itemstack5, itemstack6, itemstack7);
-            player.sendMessage("You have obtained a basic kit");
+            player.sendMessage(ChatColor.GREEN + "You have obtained a basic kit");
         } else {
-            sender.sendMessage("There has been an error in the delivery of your items, or you are not human");
+            sender.sendMessage(ChatColor.RED + "There has been an error in the delivery of your items, or you are not human");
             return false;
         }
         return false;

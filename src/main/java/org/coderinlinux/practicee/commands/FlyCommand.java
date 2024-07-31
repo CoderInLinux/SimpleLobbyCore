@@ -1,17 +1,29 @@
 package org.coderinlinux.practicee.commands;
 
+import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.command.Command;
 
-public class SpawnCommand implements CommandExecutor {
+
+public class FlyCommand implements CommandExecutor {
 
     @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(sender instanceof Player) {
-            if (cmd.ge)
+    public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
+        if(!(commandSender instanceof Player)){
+            commandSender.sendMessage(ChatColor.RED + "Este comando solo es usado en jugadores");
+            return true;
         }
-        return false;
+        Player player = (Player) commandSender;
+        if (player.getAllowFlight()) {
+            player.setAllowFlight(false);
+            player.setFlying(false);
+            player.sendMessage(ChatColor.GREEN + "Vuelo desactivado");
+        } else {
+            player.setAllowFlight(true);
+            player.sendMessage(ChatColor.RED + "Vuelo activado");
+        }
+        return true;
     }
 }

@@ -13,9 +13,7 @@ import org.bukkit.scoreboard.Objective;
 import org.bukkit.scoreboard.Scoreboard;
 import org.bukkit.scoreboard.ScoreboardManager;
 
-import java.net.http.WebSocket;
-
-public class JoinEvent implements WebSocket.Listener, Listener {
+public class JoinEvent implements Listener {
     public Location lobby = new Location(Bukkit.getWorld("world"), 0, 1, 0);
 
     @EventHandler
@@ -41,17 +39,16 @@ public class JoinEvent implements WebSocket.Listener, Listener {
         }
     }
 
-    public void setPlayer(Player p){
+    public void setPlayer(Player player){
+        player.teleport(lobby);
 
-        p.teleport(lobby);
-
-        p.setGameMode(GameMode.ADVENTURE);
-        p.setHealth(20);
-        p.setFoodLevel(20);
-        p.getInventory().clear();
-        p.getInventory().setArmorContents(null);
-        p.setExp(0);
-        p.setLevel(0);
+        player.setGameMode(GameMode.ADVENTURE);
+        player.setHealth(20);
+        player.setFoodLevel(20);
+        player.getInventory().clear();
+        player.getInventory().setArmorContents(null);
+        player.setExp(0);
+        player.setLevel(0);
     }
 
     public void setScoreboard(Player player) {

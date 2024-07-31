@@ -1,5 +1,5 @@
 name: Practicee
-version: '1.0-SNAPSHOT'
+version: '1.0-DeveloperBeta'
 main: org.coderinlinux.practicee.Practicee
 api-version: '1.0'
 
@@ -8,3 +8,5 @@ commands:
     description: make you rich
   kit:
     description: you have one kit
+  fly:
+    description: a fly command

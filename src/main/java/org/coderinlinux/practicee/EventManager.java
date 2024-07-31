@@ -6,8 +6,6 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.coderinlinux.practicee.event.JoinEvent;
 
-import java.awt.desktop.QuitEvent;
-
 public class EventManager {
     public Plugin plugin;
     public PluginManager pluginManager;

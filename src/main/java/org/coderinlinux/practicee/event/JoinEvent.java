@@ -2,7 +2,6 @@ package org.coderinlinux.practicee.event;
 
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
-import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -14,8 +13,6 @@ import org.bukkit.scoreboard.Scoreboard;
 import org.bukkit.scoreboard.ScoreboardManager;
 
 public class JoinEvent implements Listener {
-    public Location lobby = new Location(Bukkit.getWorld("world"), 0, 1, 0);
-
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
@@ -40,8 +37,6 @@ public class JoinEvent implements Listener {
     }
 
     public void setPlayer(Player player){
-        player.teleport(lobby);
-
         player.setGameMode(GameMode.ADVENTURE);
         player.setHealth(20);
         player.setFoodLevel(20);
@@ -63,9 +58,9 @@ public class JoinEvent implements Listener {
         objective.getScore("  ").setScore(10);
         objective.getScore(" ").setScore(9);
         if (player.hasPermission("admin.use")){
-            objective.getScore("§6Range §7:§c Administrator").setScore(9);
+            objective.getScore("§6Rango §7:§c Administrator").setScore(9);
         } else {
-            objective.getScore("§6Range §7:§7 User").setScore(9);
+            objective.getScore("§6Rango §7:§7 User").setScore(9);
         }
         objective.getScore("      ").setScore(8);
         objective.getScore("§bMyServer.com").setScore(7);

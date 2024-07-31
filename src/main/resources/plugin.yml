@@ -6,7 +6,12 @@ api-version: '1.0'
 commands:
   enrich:
     description: make you rich
+    usage: /enrich
   kit:
     description: you have one kit
+    usage: /kit
   fly:
     description: a fly command
+    usage: /fly
+  spawn:
+    description: a simple spawn

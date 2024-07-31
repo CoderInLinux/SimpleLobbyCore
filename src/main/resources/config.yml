@@ -1,0 +1,11 @@
+spawns:
+  default:
+    world: world
+    x: 100
+    y: 64
+    z: 100
+  spawn2:
+    world: world_nether
+    x: 10
+    y: 64
+    z: 10

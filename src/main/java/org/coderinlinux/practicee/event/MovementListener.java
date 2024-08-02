@@ -17,9 +17,9 @@ public class MovementListener implements Listener {
 
     @EventHandler
     public void movement(PlayerMoveEvent event) {
-        Location loc = event.getPlayer().getLocation();
-        loc.setY(loc.getY() - 1);
-        Block block = loc.getBlock();
+        Location location = event.getPlayer().getLocation();
+        location.setY(location.getY() - 1);
+        Block block = location.getBlock();
         Material material = block.getType();
         switch (material) {
             case WATER:

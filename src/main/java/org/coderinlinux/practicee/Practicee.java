@@ -7,7 +7,7 @@ import org.coderinlinux.practicee.event.JoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.coderinlinux.practicee.commands.*;
 
-public final class LobbyCore extends JavaPlugin implements Listener {
+public final class Practicee extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         this.getCommand("enrich").setExecutor(new EnrichCommand());
@@ -15,6 +15,7 @@ public final class LobbyCore extends JavaPlugin implements Listener {
         this.getCommand("kit").setExecutor(new KitCommand());
         this.getCommand("spawn").setExecutor(new SpawnCommand(this));
         this.getCommand("report").setExecutor(new ReportCommand());
+        this.getCommand("help").setExecutor(new HelpCommand());
         getServer().getPluginManager().registerEvents(new JoinEvent(), this);
         new EventManager(this);
         getLogger().info("Plugin enabled!");

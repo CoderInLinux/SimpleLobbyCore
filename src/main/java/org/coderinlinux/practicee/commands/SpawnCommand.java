@@ -42,13 +42,13 @@ public class SpawnCommand implements CommandExecutor {
                     location = new Location(world, x, y, z, yaw, pitch);
                 }
             }
-            spawns.put(spawnName, location); // Store spawn with its name
+            spawns.put(spawnName, location);
         }
     }
 
     private void saveSpawns() {
         FileConfiguration config = plugin.getConfig();
-        config.set("spawns", spawns); // Store all spawns in the config
+        config.set("spawns", spawns);
         plugin.saveConfig();
     }
 
@@ -61,7 +61,6 @@ public class SpawnCommand implements CommandExecutor {
         Player player = (Player) sender;
 
         if (args.length == 0) {
-            // Teleport to default spawn (unchanged)
             Location spawn = spawns.get("default");
             if (spawn != null) {
                 player.teleport(spawn);
@@ -78,17 +77,15 @@ public class SpawnCommand implements CommandExecutor {
                 player.sendMessage(ChatColor.RED + "No tienes permiso para establecer un spawn.");
             }
         } else if (args[0].equalsIgnoreCase("manager")) {
-            // List available spawns
             if (spawns.isEmpty()) {
                 player.sendMessage(ChatColor.AQUA + "No hay spawns creados.");
             } else {
                 player.sendMessage(ChatColor.AQUA + "Spawns disponibles:");
                 for (String spawnName : spawns.keySet()) {
-                    player.sendMessage(ChatColor.DARK_RED + "- " + spawnName);
+                    player.sendMessage(ChatColor.GRAY + "- " + spawnName);
                 }
             }
         } else if (args.length == 2 && args[0].equalsIgnoreCase("delete")) {
-            // Delete a spawn
             String spawnName = args[1];
             if (spawns.containsKey(spawnName)) {
                 spawns.remove(spawnName);

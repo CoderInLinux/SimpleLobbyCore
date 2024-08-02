@@ -15,3 +15,7 @@ commands:
     usage: /fly
   spawn:
     description: a simple spawn
+  report:
+    usage: /report <player> <reason>
+  help:
+    usage: /help

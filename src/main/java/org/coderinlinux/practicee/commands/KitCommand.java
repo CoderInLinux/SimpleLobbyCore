@@ -29,6 +29,6 @@ public class KitCommand implements CommandExecutor {
             sender.sendMessage(ChatColor.RED + "There has been an error in the delivery of your items, or you are not human");
             return false;
         }
-        return false;
+        return true;
     }
 }

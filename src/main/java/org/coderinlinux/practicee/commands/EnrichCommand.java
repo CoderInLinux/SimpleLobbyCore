@@ -21,6 +21,6 @@ public class EnrichCommand implements CommandExecutor {
             sender.sendMessage("Only players can use this command");
             return false;
         }
-        return false;
+        return true;
     }
 }

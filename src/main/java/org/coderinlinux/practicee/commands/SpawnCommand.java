@@ -69,7 +69,7 @@ public class SpawnCommand implements CommandExecutor {
                 player.sendMessage(ChatColor.RED + "No hay un spawn principal establecido.");
             }
         } else if (args[0].equalsIgnoreCase("set")) {
-            if (player.hasPermission("lobby.setspawn")) {
+            if (player.hasPermission("practicee.setspawn")) {
                 spawns.put("default", player.getLocation());
                 saveSpawns();
                 player.sendMessage(ChatColor.GREEN + "Spawn principal establecido.");

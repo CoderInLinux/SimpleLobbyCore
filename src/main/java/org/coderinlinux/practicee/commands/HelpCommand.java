@@ -9,7 +9,6 @@ public class HelpCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String s, String[] strings) {
             sender.sendMessage(ChatColor.DARK_GREEN + "------------------------------");
-            sender.sendMessage(ChatColor.GREEN + "Estos son los comandos de este plugin:");
             sender.sendMessage(ChatColor.GREEN + "/enrich: Comando que te da 64 diamantes");
             sender.sendMessage(ChatColor.GREEN + "/fly: Comando el cual se activa y desactiva con el mismo comando");
             sender.sendMessage(ChatColor.GREEN + "/kit: Comando el cual te da un kit basico de armadura y herramientas de madera y cuero");

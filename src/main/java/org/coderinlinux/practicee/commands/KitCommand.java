@@ -12,7 +12,7 @@ import org.bukkit.inventory.PlayerInventory;
 public class KitCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(sender instanceof Player){
+        if(!(sender instanceof Player)){
             Player player = (Player) sender;
             PlayerInventory inventory = player.getInventory();
             ItemStack itemstack = new ItemStack(Material.WOOD_SWORD, 1);

@@ -9,3 +9,22 @@ spawns:
     x: 10
     y: 64
     z: 10
+compass-name: '&d⇨ &5 Warp &d⇦'
+compass-inventory-name: '&d⇨ &5 Vestibulos &d⇦'
+inventory-lines-amount: 3
+options:
+  - option1
+  - option2
+data:
+  option1:
+    item: 345
+    name: '&cOpción 1'
+    lore:
+      - '&7Lore de la opción 1'
+    position-in-inventory: 0
+  option2:
+    item: 346
+    name: '&cOpción 2'
+    lore:
+      - '&7Lore de la opción 2'
+    position-in-inventory: 1

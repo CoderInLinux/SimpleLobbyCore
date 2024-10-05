@@ -1,12 +1,15 @@
 package org.coderinlinux.practicee.event;
 
-import org.bukkit.Bukkit;
-import org.bukkit.GameMode;
+import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.scoreboard.DisplaySlot;
 import org.bukkit.scoreboard.Objective;
 import org.bukkit.scoreboard.Scoreboard;
@@ -21,19 +24,8 @@ public class JoinEvent implements Listener {
         } else {
             event.setJoinMessage("§e> " + player.getName() + " §aSe ha unido al Lobby");
         }
-
         setPlayer(player);
         setScoreboard(player);
-    }
-
-    @EventHandler
-    public void onQuit(PlayerQuitEvent event) {
-        Player player = event.getPlayer();
-        if(player.hasPermission("lobby.quit")) {
-            event.setQuitMessage("§e> " + player.getName() + " §cHa abandonado el servidor");
-        } else {
-            event.setQuitMessage("§e> " + player.getName() + " §cHa abandonado el Lobby");
-        }
     }
 
     public void setPlayer(Player player){
@@ -66,5 +58,15 @@ public class JoinEvent implements Listener {
         objective.getScore("§bMyServer.com").setScore(7);
 
         player.setScoreboard(scoreboard);
+    }
+
+    @EventHandler
+    public void onQuit(PlayerQuitEvent event) {
+        Player player = event.getPlayer();
+        if(player.hasPermission("lobby.quit")) {
+            event.setQuitMessage("§e> " + player.getName() + " §cHa abandonado el servidor");
+        } else {
+            event.setQuitMessage("§e> " + player.getName() + " §cHa abandonado el Lobby");
+        }
     }
 }

@@ -19,3 +19,5 @@ commands:
     usage: /report <player> <reason>
   help:
     usage: /help
+  compass:
+    description: simple command compass
